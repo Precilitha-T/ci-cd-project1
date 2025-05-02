@@ -55,7 +55,7 @@ vi Dockerfile
 **Step 4**: Initialize Git & Push to GitHub
 bash
 git init
-git remote add origin https://github.com/your-username/your-repo-name.git
+git remote add origin https://github.com/Precilitha-T/ci-cd-project.git
 git add .
 git commit -m "Initial commit - CI/CD setup"
 git branch -M main
