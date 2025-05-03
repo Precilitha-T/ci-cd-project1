@@ -86,7 +86,7 @@ Value: your Docker Hub username (e.g., precilitha123)
 Do the same for your password:
 
 Name: DOCKER_PASSWORD
-Value: your Docker Hub password or access token(better to create access token and use that)
+Value: your Docker Hub password or access token(better to create access token and use that) or dockerhub password
 
 To create access token: Dockerhub account --> On profile click on Account settings --> Personal Access Tokens --> Generate new token --> Give some token description(name) --> Now, change Access permissions as read & write --> Generate --> copy the token and use it in github secrets
 
