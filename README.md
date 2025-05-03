@@ -52,7 +52,7 @@ bash
 vi Dockerfile
 
 
-**Step 4**: Initialize Git & Push to GitHub
+**Step 5**: Initialize Git & Push to GitHub
 bash
 git init
 git remote add origin https://github.com/Precilitha-T/ci-cd-project.git
@@ -62,7 +62,7 @@ git branch -M main
 git push -u origin main
 
 
-**Step 5**: Create GitHub Actions Workflow
+**Step 6**: Create GitHub Actions Workflow
 bash
 mkdir -p .github/workflows
 vi .github/workflows/docker.yml
@@ -70,13 +70,13 @@ vi .github/workflows/docker.yml
 Replace your_dockerhub_username with your actual Docker Hub username.
 Save and exit.
 
-**Step 6**: To push the workflows into the github
+**Step 7**: To push the workflows into the github
 
 git add .github/workflows/docker.yml
 git commit -m "Add CI/CD workflow"
 git push
 
-**Step 7**: Set Secrets on GitHub
+**Step 8**: Set Secrets on GitHub
 In your GitHub repo:
 
 Go to Settings → Secrets and variables → Actions → New repository secret
@@ -91,7 +91,7 @@ Value: your Docker Hub password or access token(better to create access token an
 To create access token: Dockerhub account --> On profile click on Account settings --> Personal Access Tokens --> Generate new token --> Give some token description(name) --> Now, change Access permissions as read & write --> Generate --> copy the token and use it in github secrets
 
 
-**Step 8**: Set Up Local VM for Deployment
+**Step 9**: Set Up Local VM for Deployment
 On your VM:
 bash
 sudo apt update
@@ -105,11 +105,10 @@ sudo usermod -aG docker $USER
 Log out & log back in for group changes to apply.
 
 ## 🧪 Test Locally on Your VM
-**Step 9**: Deploy the App on Your VM
+Deploy the App on Your VM
 On your VM:
 ## Pull the Docker image:
 bash
-
 docker login
 give username and token
 
@@ -120,7 +119,6 @@ Access the app in your browser:
 bash
 http://<your-vm-ip>:5000
 Use ip a or hostname -I to get your VM's IP.
-
 
 
 📸 Deliverables
